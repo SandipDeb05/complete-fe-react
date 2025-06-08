@@ -14,6 +14,8 @@ import FeaturedProducts from "./pages/FeaturedProducts";
 import NewProducts from "./pages/NewProducts";
 import Users from "./pages/Users";
 import NewUserDetails from "./pages/NewUserDetails";
+import Profile from "./pages/Profile";
+import { AuthProvider } from "./context/authContext";
 
 const LazyAbout = React.lazy(() => import("./pages/About"));
 
@@ -48,6 +50,15 @@ function App() {
         <Route path="users" element={<Users />}>
           <Route path=":userId" element={<NewUserDetails />} />
         </Route>
+
+        <Route
+          path="profile"
+          element={
+            <AuthProvider>
+              <Profile />
+            </AuthProvider>
+          }
+        />
 
         <Route path="*" element={<PageNotFound />} />
       </Routes>

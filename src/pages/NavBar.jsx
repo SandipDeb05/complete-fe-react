@@ -40,6 +40,13 @@ const NavBar = () => {
       >
         Users
       </NavLink>
+      <NavLink
+        to="profile"
+        className="text-decoration-none"
+        style={navLinkStyles}
+      >
+        Profile
+      </NavLink>
     </nav>
   );
 };
