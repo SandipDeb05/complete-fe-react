@@ -33,6 +33,13 @@ const NavBar = () => {
       >
         User Details
       </NavLink>
+      <NavLink
+        to="users"
+        className="text-decoration-none"
+        style={navLinkStyles}
+      >
+        Users
+      </NavLink>
     </nav>
   );
 };
